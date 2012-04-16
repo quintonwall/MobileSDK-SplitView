@@ -20,8 +20,8 @@
 
 // Fill these in when creating a new Remote Access client on Force.com 
 //currently points to dbworkbook demo org
-static NSString *const RemoteAccessConsumerKey = @"3MVG9yZ.WNe6byQCvOseoyYYce2e3lBKlRYw824Fw4DvGTHOAU8ofPfhu3Fv7IRxSkLkUaRdCaU__yRvNnK2U";
-static NSString *const OAuthRedirectURI = @"mobilesdk://success";
+static NSString *const RemoteAccessConsumerKey = @"YOUR_CONSUMER_KEY";
+static NSString *const OAuthRedirectURI = @"YOUR_REDIRECT_URI";
 
 
 static NSString * const kSFMobileSDKVersion = @"1.0.2";
