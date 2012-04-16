@@ -1,6 +1,12 @@
 This project contains the complete code from the Cloudstock San Francisco 2012
-developer keynote presentation for the Salesforce Mobile SDK. Specifically,
-this project contains an example of using the Mobile SDK with a Split-View Controller
+developer keynote presentation for the Salesforce Mobile SDK. 
+
+Some MobileSDK specifics that the project demonstrates are:
+1. Using OAuth and a SplitView Controller
+2. Using the MobileSDK to call the Chatter REST API
+3. Displaying Chatter profile images on an external device
+4. Working with Chatter Accountfeed information
+5. Querying and working with JSON results via the REST API
 
 Feel free to ping me via twitter (@quintonwall) if you have any questions
 
