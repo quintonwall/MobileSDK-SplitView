@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8577DDB6153DEEB500F386CF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8577DDB5153DEEB500F386CF /* Settings.bundle */; };
 		E7459B2F150BC5F000FE3C1C /* round-rect-big.png in Resources */ = {isa = PBXBuildFile; fileRef = E7459B2E150BC5F000FE3C1C /* round-rect-big.png */; };
 		E7459B34150BCB7B00FE3C1C /* postit-note.png in Resources */ = {isa = PBXBuildFile; fileRef = E7459B33150BCB7B00FE3C1C /* postit-note.png */; };
 		E7AFE81B150A47AC007E7DA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AFE81A150A47AC007E7DA6 /* UIKit.framework */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8577DDB5153DEEB500F386CF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E7459B2E150BC5F000FE3C1C /* round-rect-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rect-big.png"; sourceTree = "<group>"; };
 		E7459B33150BCB7B00FE3C1C /* postit-note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "postit-note.png"; sourceTree = "<group>"; };
 		E7AFE816150A47AC007E7DA6 /* Cloudstock3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudstock3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -636,6 +638,7 @@
 			children = (
 				E7CB679F150A9D32006B455C /* icons */,
 				E7CB67A7150A9D32006B455C /* splash */,
+				8577DDB5153DEEB500F386CF /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				E7459B2F150BC5F000FE3C1C /* round-rect-big.png in Resources */,
 				E7459B34150BCB7B00FE3C1C /* postit-note.png in Resources */,
 				E7FC423A150BE9ED003D26CB /* ferrari-icon.png in Resources */,
+				8577DDB6153DEEB500F386CF /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +843,8 @@
 		E7AFE83B150A47AD007E7DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cloudstock3/Cloudstock3-Prefix.pch";
 				INFOPLIST_FILE = "Cloudstock3/Cloudstock3-Info.plist";
@@ -855,6 +861,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D2D6249D-31D6-4243-8685-470459B5B15F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D2D6249D-31D6-4243-8685-470459B5B15F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -862,6 +870,8 @@
 		E7AFE83C150A47AD007E7DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cloudstock3/Cloudstock3-Prefix.pch";
 				INFOPLIST_FILE = "Cloudstock3/Cloudstock3-Info.plist";
@@ -878,6 +888,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D2D6249D-31D6-4243-8685-470459B5B15F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D2D6249D-31D6-4243-8685-470459B5B15F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
