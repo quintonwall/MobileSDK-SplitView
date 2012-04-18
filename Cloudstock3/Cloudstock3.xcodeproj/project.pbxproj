@@ -843,8 +843,8 @@
 		E7AFE83B150A47AD007E7DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cloudstock3/Cloudstock3-Prefix.pch";
 				INFOPLIST_FILE = "Cloudstock3/Cloudstock3-Info.plist";
@@ -861,8 +861,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D2D6249D-31D6-4243-8685-470459B5B15F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D2D6249D-31D6-4243-8685-470459B5B15F";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -870,8 +870,8 @@
 		E7AFE83C150A47AD007E7DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Loshchilov (G2L5WPW3WU)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cloudstock3/Cloudstock3-Prefix.pch";
 				INFOPLIST_FILE = "Cloudstock3/Cloudstock3-Info.plist";
@@ -888,8 +888,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D2D6249D-31D6-4243-8685-470459B5B15F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D2D6249D-31D6-4243-8685-470459B5B15F";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
