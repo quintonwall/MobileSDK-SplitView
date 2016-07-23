@@ -20,8 +20,8 @@
 
 // Fill these in when creating a new Remote Access client on Force.com 
 //currently points to dbworkbook demo org
-static NSString *const RemoteAccessConsumerKey = @"YOUR_CONSUMER_KEY";
-static NSString *const OAuthRedirectURI = @"YOUR_REDIRECT_URI";
+static NSString *RemoteAccessConsumerKey = nil;// = @"YOUR_CONSUMER_KEY";
+static NSString *OAuthRedirectURI = nil;// = @"YOUR_REDIRECT_URI";
 
 
 static NSString * const kSFMobileSDKVersion = @"1.0.2";
@@ -118,6 +118,8 @@ NSString * const kDefaultLoginHost = @"login.salesforce.com";
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 	//setup our oauth view
+    NSLog(@"didFinishLaunching");
+    
 	[self setupAuthorizingViewController];
 	
 	
@@ -205,12 +207,37 @@ NSString * const kDefaultLoginHost = @"login.salesforce.com";
 	 */
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handleOpenUrl");
+    if (!url) {  return NO; }
+    
+    NSString * consumerKey = [url host];
+    NSString * redirectUrl = [url absoluteString];
+    
+    NSRange index = [redirectUrl rangeOfString:@"="];
+    
+    NSInteger loc =index.location;
+    redirectUrl = [redirectUrl substringFromIndex:loc+1];
+    
+    OAuthRedirectURI = redirectUrl;
+    RemoteAccessConsumerKey = consumerKey;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:consumerKey forKey:@"consumerKey"];
+    [[NSUserDefaults standardUserDefaults] setObject:redirectUrl forKey:@"redirectUrl"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return YES;
+}
+
 #pragma mark - Salesforce.com login helpers
 
 
 - (SFOAuthCoordinator*)coordinator {
     //create a new coordinator if we don't already have one
     if (nil == _coordinator) {
+        
+        OAuthRedirectURI = [[NSUserDefaults standardUserDefaults] objectForKey:@"redirectUrl"];
+        RemoteAccessConsumerKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"consumerKey"];
         
         NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleNameKey];
         NSString *loginDomain = [self oauthLoginDomain];
